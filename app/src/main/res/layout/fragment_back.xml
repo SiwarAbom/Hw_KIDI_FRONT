@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4E7FE7"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".BackFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="Admin Main"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/background"
+        android:clipToPadding="false"
+        android:hapticFeedbackEnabled="false"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="Please choose:"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <RadioGroup
+            android:id="@+id/radioDate"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioYear"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="getThePeriod"
+                android:text="Year"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/radioMonth"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:onClick="getThePeriod"
+                android:text="Month"
+                android:textSize="30sp" />
+
+            <RadioButton
+                android:id="@+id/radioWeek"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:onClick="getThePeriod"
+                android:text="Week"
+                android:textSize="30sp" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="526dp"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+
+            android:orientation="horizontal">
+
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/activity_main_piechartActivity"
+                android:layout_width="200dp"
+                android:layout_height="match_parent" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/activity_main_piechart"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/activity_main_piechartKid"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/activity_main_piechartTotal"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="horizontal">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"></com.github.mikephil.charting.charts.BarChart>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>
